@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  database: 
+    container_name: bike-postgres
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - ${DB_PORT}:5432
