@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "nodemon --exec babel-node src/index.js",
+    "prisma:deploy": "yarn prisma migrate dev --preview-feature",
     "test": "jest"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "dotenv-expand": "^5.1.0",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
@@ -26,7 +28,10 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "jest": "^27.1.0",
+    "jest-environment-node": "^27.1.0",
+    "nanoid": "^3.1.25",
     "nodemon": "^2.0.12",
+    "pg": "^8.7.1",
     "prisma": "^2.30.3",
     "supertest": "^6.1.6"
   },

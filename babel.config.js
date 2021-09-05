@@ -9,7 +9,7 @@ module.exports = {
       alias: {
         '@tests': '.src/__tests__',
         '@server': './src/server',
-        '@config': './src/config',
+        '@config-test': './src/tests',
         '@data': './src/data'
       }
     }]
