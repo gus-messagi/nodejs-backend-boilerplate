@@ -11,7 +11,7 @@ beforeEach(() => {
   request = supertest(server)
 })
 
-afterAll(async done => {
+afterEach(async () => {
   await disconnect()
-  server.close(done)
+  server.close()
 })
